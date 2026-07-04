@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naveen Chakravarthy Madeti — Technology Strategist &amp; AI Enablement Leader</title>
+    <meta name="description"
+        content="Technology Strategist, Engineering Manager, Solution Architect, and AI Enablement Leader with 12+ years of experience building scalable digital platforms.">
+    <meta name="theme-color" content="#14171F">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F7F4EC;
+            --paper-raised: #FFFFFF;
+            --ink: #14171F;
+            --ink-soft: #565C6B;
+            --ink-faint: #8C8F98;
+            --blueprint: #2647E0;
+            --blueprint-dim: #DDE3FA;
+            --teal: #0E8A80;
+            --coral: #DD5B33;
+            --line: #E1DACB;
+            --grid-line: rgba(38, 71, 224, 0.07);
+            --radius: 2px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        ::selection {
+            background: var(--blueprint);
+            color: #fff;
+        }
+
+        /* focus visibility */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--blueprint);
+            outline-offset: 3px;
+        }
+
+        /* ============ EYEBROW / SECTION LABEL ============ */
+        .eyebrow {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--blueprint);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 22px;
+            height: 1px;
+            background: var(--blueprint);
+            display: inline-block;
+        }
+
+        /* ============ HEADER / NAV ============ */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(247, 244, 236, 0.86);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .site-header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 68px;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: .02em;
+        }
+
+        .logo span {
+            color: var(--blueprint);
+        }
+
+        nav.primary-nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav.primary-nav a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            letter-spacing: .02em;
+            position: relative;
+            padding: 6px 0;
+            transition: color .15s ease;
+        }
+
+        nav.primary-nav a:hover {
+            color: var(--ink);
+        }
+
+        nav.primary-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--blueprint);
+            transition: width .2s ease;
+        }
+
+        nav.primary-nav a:hover::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: var(--radius);
+            border: 1px solid var(--ink);
+            cursor: pointer;
+            transition: all .15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+        }
+
+        .btn.primary {
+            background: var(--ink);
+            color: var(--paper);
+        }
+
+        .btn.primary:hover {
+            background: var(--blueprint);
+            border-color: var(--blueprint);
+        }
+
+        .btn.ghost {
+            background: transparent;
+            color: var(--ink);
+        }
+
+        .btn.ghost:hover {
+            background: var(--ink);
+            color: var(--paper);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--ink);
+            margin: 5px 0;
+            transition: .2s;
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 88px 0 96px;
+        }
+
+        .hero .blueprint-grid {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 44px 44px;
+            mask-image: radial-gradient(ellipse 90% 70% at 65% 30%, black 20%, transparent 75%);
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.15fr .85fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: clamp(34px, 4.4vw, 54px);
+            line-height: 1.05;
+            letter-spacing: -.01em;
+            margin: 6px 0 10px;
+        }
+
+        .hero-content h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 500;
+            font-size: clamp(17px, 2vw, 21px);
+            color: var(--blueprint);
+            margin-bottom: 16px;
+        }
+
+        .hero-content .tagline {
+            color: var(--ink-soft);
+            font-size: 16px;
+            max-width: 46ch;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 22px;
+            margin-top: 34px;
+            flex-wrap: wrap;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12.5px;
+            color: var(--ink-faint);
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .hero-meta b {
+            color: var(--ink-soft);
+            font-weight: 500;
+        }
+
+        .hero-image {
+            position: relative;
+            justify-self: center;
+        }
+
+        .frame {
+            position: relative;
+            width: 280px;
+            height: 280px;
+        }
+
+        .frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius);
+            filter: grayscale(14%);
+        }
+
+        .tick {
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border: 2px solid var(--blueprint);
+        }
+
+        .tick.tl {
+            top: -12px;
+            left: -12px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .tick.br {
+            bottom: -12px;
+            right: -12px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .tag-chip {
+            position: absolute;
+            bottom: -18px;
+            left: -18px;
+            background: var(--ink);
+            color: var(--paper);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            letter-spacing: .06em;
+            padding: 7px 12px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .tag-chip .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--teal);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: .35;
+            }
+        }
+
+        /* ============ SECTION SHELL ============ */
+        .section {
+            padding: 80px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 40px;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .section-head h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 600;
+            letter-spacing: -.01em;
+        }
+
+        .section-note {
+            color: var(--ink-faint);
+            font-size: 13.5px;
+            max-width: 34ch;
+            text-align: right;
+        }
+
+        /* ============ ABOUT ============ */
+        .about-text {
+            font-size: 18px;
+            color: var(--ink-soft);
+            max-width: 74ch;
+            line-height: 1.75;
+        }
+
+        .about-text strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        /* ============ EXPERIENCE (timeline) ============ */
+        .timeline {
+            position: relative;
+            padding-left: 36px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            bottom: 6px;
+            width: 1px;
+            background: var(--line);
+        }
+
+        .tl-item {
+            position: relative;
+            padding-bottom: 44px;
+        }
+
+        .tl-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .tl-dot {
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--paper);
+            border: 2px solid var(--ink-faint);
+        }
+
+        .tl-item.current .tl-dot {
+            border-color: var(--coral);
+            background: var(--coral);
+        }
+
+        .tl-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+
+        .tl-role {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 19px;
+        }
+
+        .tl-company {
+            color: var(--blueprint);
+            font-weight: 500;
+        }
+
+        .tl-date {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            color: var(--ink-faint);
+            white-space: nowrap;
+        }
+
+        .tl-loc {
+            font-size: 13px;
+            color: var(--ink-faint);
+            margin-bottom: 12px;
+        }
+
+        .tl-highlights {
+            list-style: none;
+            display: grid;
+            gap: 7px;
+            margin-bottom: 14px;
+        }
+
+        .tl-highlights li {
+            padding-left: 16px;
+            position: relative;
+            color: var(--ink-soft);
+            font-size: 15px;
+        }
+
+        .tl-highlights li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--ink-faint);
+        }
+
+        .tl-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            color: var(--ink-soft);
+            border: 1px solid var(--line);
+            padding: 4px 9px;
+            border-radius: var(--radius);
+            background: var(--paper-raised);
+        }
+
+        /* ============ SKILLS ============ */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .skill-cell {
+            background: var(--paper-raised);
+            padding: 26px;
+        }
+
+        .skill-cell h4 {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 12px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--ink-faint);
+            margin-bottom: 14px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .skill-tags .tag {
+            background: var(--paper);
+        }
+
+        /* ============ PROJECTS ============ */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .proj-card {
+            background: var(--paper-raised);
+            padding: 30px;
+            transition: background .15s ease;
+            position: relative;
+        }
+
+        .proj-card:hover {
+            background: #fff;
+        }
+
+        .proj-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 12px;
+        }
+
+        .proj-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .proj-dur {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            color: var(--ink-faint);
+            white-space: nowrap;
+            padding-top: 4px;
+        }
+
+        .proj-role {
+            color: var(--blueprint);
+            font-size: 12.5px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .proj-desc {
+            color: var(--ink-soft);
+            font-size: 14.5px;
+            margin-bottom: 14px;
+        }
+
+        .proj-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        /* ============ EDUCATION / CERTS / ACHIEVEMENTS ROW ============ */
+        .tri-grid {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr 1fr;
+            gap: 48px;
+        }
+
+        .edu-item {
+            margin-bottom: 22px;
+        }
+
+        .edu-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-item .degree {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .edu-item .field {
+            color: var(--blueprint);
+            font-size: 14px;
+            margin: 2px 0 4px;
+        }
+
+        .edu-item .inst {
+            color: var(--ink-soft);
+            font-size: 13.5px;
+        }
+
+        .edu-item .yrs {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11.5px;
+            color: var(--ink-faint);
+            margin-top: 3px;
+        }
+
+        .plain-list {
+            list-style: none;
+            display: grid;
+            gap: 10px;
+        }
+
+        .plain-list li {
+            font-size: 14.5px;
+            color: var(--ink-soft);
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .plain-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 5px;
+            height: 5px;
+            background: var(--teal);
+        }
+
+        .ach-item {
+            margin-bottom: 18px;
+        }
+
+        .ach-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .ach-item .t {
+            font-weight: 600;
+            font-size: 14.5px;
+            margin-bottom: 2px;
+        }
+
+        .ach-item .d {
+            color: var(--ink-soft);
+            font-size: 13.5px;
+        }
+
+        .tri-col h4.mini-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 11px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--ink-faint);
+            margin-bottom: 18px;
+        }
+
+        /* ============ CONTACT / FOOTER ============ */
+        .contact-section {
+            background: var(--ink);
+            color: var(--paper);
+            border-top: none;
+        }
+
+        .contact-section .eyebrow {
+            color: var(--teal);
+        }
+
+        .contact-section .eyebrow::before {
+            background: var(--teal);
+        }
+
+        .contact-section h3 {
+            color: #fff;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-grid a,
+        .contact-grid span {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+            color: #D8D9DE;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-grid a:hover {
+            color: var(--teal);
+        }
+
+        footer {
+            padding: 26px 0;
+            font-size: 12.5px;
+            color: var(--ink-faint);
+        }
+
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* ============ REVEAL ANIMATION ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity .5s ease, transform .5s ease;
+        }
+
+        .reveal.in {
+            opacity: 1;
+            transform: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            .tag-chip .dot {
+                animation: none;
+            }
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width:860px) {
+            nav.primary-nav {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                justify-self: start;
+                order: -1;
+            }
+
+            .frame {
+                width: 150px;
+                height: 150px;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tri-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .section-head {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section-note {
+                text-align: left;
+            }
+        }
+
+        @media (max-width:560px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero {
+                padding: 60px 0 64px;
+            }
+
+            .header-actions .btn.ghost span.label {
+                display: none;
+            }
+        }
+
+        /* ============ PRINT ============ */
+        /* .print-resume{display:none;} */
+        /* @media print{
+  @page{margin:14mm 16mm;}
+  body *{visibility:hidden;}
+  .site-header,.hero,.section,footer{display:none !important;}
+  .print-resume, .print-resume *{visibility:visible;}
+  .print-resume{
+    display:block;position:absolute;left:0;top:0;width:100%;
+    font-family:'Inter',Arial,sans-serif;color:#111;background:#fff;
+    font-size:10.6pt;line-height:1.45;
+  }
+  .pr-header{border-bottom:2px solid #1a1a1a;padding-bottom:10px;margin-bottom:14px;}
+  .pr-header h1{font-family:'Space Grotesk',Arial,sans-serif;font-size:22pt;font-weight:700;margin-bottom:2px;}
+  .pr-header .role{font-size:12pt;color:#2647E0;font-weight:600;margin-bottom:6px;}
+  .pr-contact{display:flex;flex-wrap:wrap;gap:14px;font-size:9pt;color:#333;}
+  .pr-contact a{color:#2647E0;text-decoration:underline;}
+  .pr-section{margin-bottom:14px;break-inside:avoid-page;}
+  .pr-section h2{
+    font-size:10.5pt;text-transform:uppercase;letter-spacing:.08em;
+    color:#2647E0;border-bottom:1px solid #ccc;padding-bottom:3px;margin-bottom:8px;font-weight:700;
+  }
+  .pr-summary{margin-bottom:2px;}
+  .pr-job{margin-bottom:10px;break-inside:avoid;}
+  .pr-job-head{display:flex;justify-content:space-between;font-weight:700;font-size:10.8pt;}
+  .pr-job-sub{display:flex;justify-content:space-between;font-size:9.3pt;color:#444;font-style:italic;margin-bottom:3px;}
+  .pr-job ul{margin:0 0 0 15px;padding:0;}
+  .pr-job li{margin-bottom:1px;}
+  .pr-skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 22px;}
+  .pr-skills-grid div{font-size:9.6pt;margin-bottom:3px;}
+  .pr-skills-grid b{color:#111;}
+  .pr-two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .pr-edu-item{margin-bottom:6px;font-size:9.6pt;}
+  .pr-edu-item .d{font-weight:700;}
+  .pr-list-inline{font-size:9.6pt;}
+} */
+    </style>
+</head>
+
+<body>
+
+    <!-- ============ SCREEN VERSION ============ -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">M<span>N</span>C</div>
+            <nav class="primary-nav">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a class="btn primary" href="https://linkedin.com/in/ncreato/" target="_blank" rel="noopener"><span
+                        class="label">LinkedIn</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="blueprint-grid"></div>
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <p class="eyebrow mono">Hyderabad, India</p>
+                    <h1>Madeti Naveen Chakravarthy</h1>
+                    <h2>Technology Strategist &amp; AI Enablement Leader</h2>
+                    <p class="tagline">Building scalable engineering teams, AI-enabled products, and digital
+                        transformation programs across FinTech, healthcare, and e-commerce.</p>
+                    <div class="hero-buttons">
+                        <a class="btn primary" href="https://linkedin.com/in/ncreato/" target="_blank"
+                            rel="noopener">Connect on LinkedIn</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span><b>12+ yrs</b> experience</span>
+                        <span><b>7</b> roles</span>
+                        <span><b>FinTech · Healthcare · AI</b></span>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <div class="frame">
+                        <div class="tick tl"></div>
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAH0AfQDASIAAhEBAxEB/8QAHAAAAwACAwEAAAAAAAAAAAAAAAECAwcEBQgG/8QAQxAAAgEDAgMFBQQHBQkBAQAAAAECAwQRBSEGEjEHQVFhcRMigZGhCBSxwRUjMkJSYoIkM3Ky0RYmQ0RzkqKz4WPw/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABkRAQEBAQEBAAAAAAAAAAAAAAABEQIxEv/aAAwDAQACEQMRAD8A3FsHKR6FrcAwPGBoADA8MMFYAEiuXKBIrAEpYLQkigDBXQEsDwA8BgaGgHHoGCl0DoBLQ4hgbQA0JoaG0BKQYKSDlAnA0isDwBOAaLSDlAjA+UrA8ZAjA8FcoYAjAYL7waAjAmjJgTQGPAJYLwGAJ7hYwXgWAIwLBkwGAMYYyU0CWAMbWwuXBlaJwBGBYMmBNAQ+gmti8EsDG0GCgwBBOC8CaAxNEtGXGSWgIXQTLwhNARgTLewnuBjYYyU4iaAhonG5bIYBgAADNgpIEisADBDSyPCAEslYBIeMANIpCXQaAMFJBgpACQ8DSHjICSKS2BLBWMgCQYKwNIBYE4l4wAEJDwVjYOUCUisDwPAE4DBWB4AnA8DwPlAnAYKwGAJHgeAwBOBYLwGAJxsLBeBYAjA8FYACcCwWJoCMIWCxNATgTRYNAY2hYMnKLAENEsyNEtAQyWi8CwBDiJoyNEtARglotoWAMbQYMjRLAxuIsGTGxLAxtCLe5LWwECZTQmgMbWxOC2JgRgBtAByIldwkikAJDSyPuKQCisFYyGCkAkikCRSiAJDSGlgrACSKwCQ0AJDSGkNIBoaQhgAYGuowJwNIeBpALAYKwGAEkGCkgwAgHhhgBYyPA8D6gTgMFqDxnBHtIc3Lzw5vDmWQDAYK5JZxhgkBOBYLYsATgTRTDAE4BorAsALBLRQNATgTKwGAIDBWBYAloWCsCaAhonBbE0BLE0VgTQENEtGRktYAhonDLbEwIa2IaMjJkBBMkWJgY2ItoloCGS47ltEsCeXzAH1ADk4ACkALYqJKRaQFJDQkUkAdCkLA0BSGhJbFJANFrYlLcpIBjBIeABIeEIoBDSDG5QCYIYYAEGCkhAGAwNRb6HFvNVsNPWby+tLb/rVow/FgcoipVp0o81WcKcf4ptJfNmseO+02ytLWpT03iZOrPKhS0ujGcvWVabwv6Vk0lfaleanWlXvbu5uakv3q9VzfzZZE16puuKtEtvderafKf8Cuqaf1kj5ziXtCWl2U6lnf8NwquOYe1v3VkvPkpx3+Z5uSS6JAX5NfZa92p8T6vOVKvf2dWjjHLTtY8nylHJ8vUvZ1p+0lGnGfjTgofRbHGwGDQ7ex4u1/S9rLV72lDvh7Vyg/6XlH1Og9tXEulVk7udHUrfvpVlh/0z6r45Xka/Yu8mD0DaduvD9ahGtXtrqi9uaisOpF+KziMl8U/I7ex7XuDL+SitW+7t91zRnD64x9TzT1DOOg+TXri01/R7+EalrqtjXjLo6deLX4nO6PB47p1atKaqUqk6c1+9B4Z9dwj2na7wpVjFV3e2Wfeta7zFL+R9YP028ifJr0uS0fI8NdpulcVW85WNGt97ornq2Use2cO+VNdJ48Fv8ATP1Npd2+o2lK8tK0K9vWjzQqQezX/wDd3cZVlQMeBMBCwPAYAliwWLAECZbROAJE0W0JgQyWW0QwJZLKE0BDQYKaJYEyRLRZLQE4wSymiWBLFgpiAxslotohgS1kB49AAzlIWBpAUUicFJAUNAkPADSKEikA0ikhIaAaLSJRSYDSHgQwBDBDAY8CwUgEA2AAdfrmt2OgafUvL+7t7WEU1GVZtKUvBJbv0SyVrmt2nDunVNQvXP2cWoxhTXNOrN9IRXe3/wDeiPNvaDxfe8V6vO4rVadOmvdhbUZ88aUV3OXST73jbJZNHO4w7UNc1a8qULLW7xWXT9TD7tGa/wAKbl/3Sfoj4qdSVWTnNuUn1lJ5bMa36jRvEU9xDE9gDA0LI0A8ANCYCAYPcBJjFgMgHQMgAGeyvrjTbqld2lapQuKMlKnUpvEovxTNg8F9qtzYa6/vrVKz1B/2qMElCnX6KtBdFnbmXTqzWwpZxgmD1FoHH1hq+oS0mvy2+oQk6fK37tWaWWo+Dxh4fi1luLPpjyFb6nd21eN1CvUVxBwlCon70ZQ/Zfqj1Nwdr8eK+GbDWMRjO4p/rIrpGoniS+aZmxXb4AeAwQSA8ABLRLLaJAWAa2ATYEtEtF4yS0BDQmU1gQEMlotiYENYJLZLWAIZDRkaFgDHhiLaySwIaIaMkiGBIBgAMyLQkikBSGhFIChkorqAIpAkUkA0NCSKQFJZQ+UIlAIYDwAJDAoAQAh4ADharrel6Fb/AHjVL+3s6fc6ssOXour+BzTq+JNf0zhjTJ6lqldUqMfdisZnOXdGK72BortM7TanFtVWNinS06m3yy5HGVXOzy3vjy2+Jr5bbHf8Y8R0eJdVldW9nO2pLKj7WtKrVn5zk3jPlFJI6Fo6RCwMEDAYmAACH0EMAyG4IewCyCYMQFdRYBDAEgYsjwBPeMWA3AMZNzfZ+1qrWlf6LNv2NKCr003sm5b/AImmT6vgLi2HBz1a+inK7q2nsLWHdzykm5t+EUn8WiUelLHUKV9Xv6VPD+53LtpNPrJQhJ/Lmx8DlM+Y7NtPu7HhK2nqHP8Afbuc7ys5rEnKo+Zt+e/4H05hSENoWAEyWi2LAEYDBWBASTgt4EBjaJwZGSwIaIkjIyWgIJkWyZASJlYE0BBLKZLAhklMloCWwBgByEMENAMaEWgBFLYEh4Aa3KTwSikgKRSEkUuoDRSJRaAMDQDQB0GGMjWwAkMENAY6tWnb0alatNQpU4uc5PpGKWW38Dy/2gcbXHG2uTupJ07KjmnaUn1jDP7T/mfV/LuN09tGsXGkcEV4W9RUp3lSNtKWd+V5corzaWPTJ5vNcxKAARoPICGAAAMAHgkruABkjjuAmCY2hAAxDAB9SR5AeEhAACKhNwkpRbUk8prqmTgTA+n0ztJ4r0mrGdDXL6pFPeFap7WMvhPJvLs87RLTjOzdGrOnS1OkszoYw5R/iXc16P4I8zI5Fjf3Wm3tG9sq9S3uKElOnUg8OLJYPYQYPm+AOMaXGnD9O8ajC7pP2V1Tj0U8dV5Pqviu4+kMKQmNgBLQhsQEtbibKl0JaAhkvqU+omAmSxsT3AiQZG1kTATIZb2IYEshlsiQEsWMFYJYEtpAJsAM6KRCKQFIolFoBplZySNAUi1sTFFICkUSkWl3gCKQhpAUNBsC6gNDEMAwUAIDRn2gtUqXGsafpUG/Y2lH288dOebaWf6Y/VmpkbW7e6cLLVbeEGp1b6TuqrxvGEYRpwh6ZVR/1eRqnJueIYMEPBQsBgeAASAMMGAYHgEDAAQs4DIA2AZyGQGAsjAeCdxgwEMBAMWADIA1gAF1A2z9n+9qrWL62g80qtH9bD+GSeYTXk1zxfny+JvJo8+dhF/Gy4znbP8A5y1nTXrFqX4RZ6EMX0iAwNiIpNCYMQCZLKEwIYhtiYEyJKaE0BImMTAlkspksCGSymhATgloohsCcAMAMuBoRUQKSKQkhgWNCRQDRSEkNAUikyUUgGikIaAY8ggwAIpCSGkAxoQwNGfaDt4UtY02snzVa1GSa/ghF7L4uUn8EalNzfaA0O5nUsdb9pD7rCEbTlz73O3OT28MI00tjc8RWBoWQKGIYgGIYAIBgBLFgYAIMjFgAQxZGANiyPA2gFkAAAEUACAAA2R2F6XTvuLHdOXLUsIusv5oyjKDj85RfwZ6DZov7Pk8a9qlLCzK0jJPwxNf6m9GYpCaJY2JkVIYGJgSxMbE0BLRJTJYCZDZZDACWisE5AlolltkMCWSUxMCGQy2iWBPwANvAAMqZUWJIpICkykSkUgKWxSJyNAWholbloBoolFJANFISRSAYACApIYkNANAA8AfE9sGkfpbgS95eb2lpKN1HHfy5T+km/geaUtj19xBQ+86DqdJR5nO0rLl8XyM8g7xWGsNLoa5SgZOcjRoMAEBQZEADEANgIAABMXUbGgFgY8CwA0MSBsBAhhgAwPoIQDAWRpZYG6Ps+6OoUtR1mWHz/2VeMWmpP55XyNxM+L7ItMpafwJp0oQ5Z3SlcTfi28J/KKPszFUEsoCCGLA5IQCZL9SmSwEyWihMCGSUxASQ0XIjIEsTKZOAJkTkpkvqAmRIpshgTzAJ+gAcjoUmSikBUSkSkUkBawMlFICkUiUUgKSL6bkopANDQhoBjQkNANLA0Ad4DKRKGgK2xhrKez9DyLxVpVTQ+IdQ06qsSt68o7eHVfRo9c5POfbjpFTT+Np3rhJUdQpRqxl3OcUoyX0T+JrlK16kNBgDQYCQ8AABjxGBPQBsTAAYYGkBOBgxMChMMjQCyT3lCAeRkjAAAOoAOMZTajBZk9kSd/wBpv6W400ezlHmpzuYymv5Y+8/ogPUOjadT0nR7HT6S922oU6S/pikcxIp+IjmqWIpksBCGIBMTY2SwE0IAYENbiZTJYEtENFMXUCBMpksCGSWyWBDIaLkSwJAH6ABnSKWxCZS3AtMpEItAUkNCRSAqJRKKQDRaIwUgKSKSJTKTAMFIlFZAaAMgA0ivQSGgF0NSdvdfRL3TLWmtStlq9jUclac2ZyhPCey6PZPfGyZtHV9RWkaVe6hJKStbepWw+/li3+R5Bua9W9uat3cVJVK9ebqVJyeXKTeWyyJWNPxDIC6Gwx5EADyAgAeAAADAxZE2BTIYyWAx4JRS3AAwPAmwExpiYgLEwAAPr+zHizSODtcq6lq1rc137P2dB0FF+zb/ak8td23xZ8gS9+oHsLR9Xstf0yhqenV1Xta6zCaWH4NNdzT2aOYak+zzqFSppWr6dKWadGtTrQXhzxaf8AkRtwxVSyWU+giBMkbEAiWUS9gEyXsNiYEvcTKZLAhollMlgSxMbZLAlsTBi7gJZLKZLATAXMgAzIpEp7FLIFoaEhpgWiiUUgKRSZCKQFoECGA0UiUNAUNdRDApIYkUgAECHgDo+OYuXBWvJdfuFf/IzyctkeveIbSV9oGp2kete0rU16uDR5B7ka5SmAPoCNAAYmAIZI0AwEAAJMNwQDYmPAgEMAAaYMQAPAYAAABNhkBsl7DyLOQNx/Z0yrrXv4XTofjM3Wae+zrQf3HXLnG0qtGkn6Rk3/AJkbhb2MX1YQmhsTZBIhsTAQmPoJ9AIYmNksBEsp7ksCWQy2QwJbFkbJYCkS+g2SwJYn0GyZPAENIAygA5CLRjRUQL6DQhpgXF4KITLQFJFIlDAtMpEIpAUisCTGAxiQwKiUQigGiiO8pAGFnfdd55A1/T3pOu6jYSTX3a5qUlnwUml9D1+9zzj24aO9L43q3MIYpahShcJ9zklyy+sc/E1yla/GJBk0DI85JGgDABkMgPICyDAB4FnA08gGRDwLvAMBgbEAYyGChAIYmwyAmAwSAQujKaKpUp1qsKVOLlUqSUIRXfJvCQHofsL02VhwNG4ksO9ualZf4ViC/wArNho4GgaTDQtDsNLhjFpQhSeO9pbv4vLOwOapExtiAQmDYgExMp7kNADIfUolgS2SxsTAlkspkMBNEvYbYmBDe5OSmSwJZLZTIYCAPiAGdFIkYFopEopAVEpEopAWholFoBlISGkBSYycjQFpjRKKQDRRKGAx5EhgPqa77cOHHrHCP6QoU+e50ubrbdXSe018Npf0s2GialOFanKlUhGcJxcZRksqSezTEHjLqPc+x7SuALjgjVZyp05z0mvJu3r4yo5/4cn3SX1W/ifHZxjPf0OiGAug8gDAQAMATGAuo0sCyNMAbAWdgyA+oMWQAaAAyBLGDBAA0IyUqFWvlUqc6kknJqEW2kur27gMb3Pvexbhl67xhTvK1NytdLSuJNrZ1P8Ahr55l/SfKaFw3qvEl5G00qyrXNWTw3GL5YecpdEvU9M8CcIW/BfD9LT4ONS4k/a3NZL+8qPw8l0X/wBJaPohMBNmFDJY8iAQhtCARLZXcQwE2S2NkvYBMljbFkCWhMpkSAlktjbJATRjZb8CWBLZDe5b3RjawAZAWUAHIRaIWxSYFIpMhFJgWi0QikBSLTISKQF5GmSikA0UiSkBWdxkjTApFEggLQychnIFDJyPuAxXFvRu6MqFxSp1qU1iUKkVKMl5p7M+J7QOC9Do8C63+jtGsLWvG3dZVKNCMZe41N7pZ6Jn3ZFe1p3tvVtayTpV4SpzT74tYf4geMl9CkcjUbKemX9zY1FidtVlRkvOLa/I450QwwAAIYAgHgQ+gsAHUMDSBgLAAhgLIwwJgLA+gg6gM2f2AWLrcV3l6ulrZuPxnJL8FI1eb5+z9pf3fh7UNTlHDu7hUovxjBf6yfyJfBtTljFYilFeC2AMgYUEsbJYCyGRiYA2S2DBgS2SxskBMTGxPYCe4llMlsCWyZDbJbAQmh5Jk8gSyWORLATJkimRJgQ0AZx3gByUykzEmWgLRSIWxWQLRaZCZSYFplJmNFoCkWiEVkC8gSiugFDJRSAaGAAMaEmPIDASY2ADTEAHm/tt0CekcbV7yMGrfUoK4i+7n/Zmvms/1HwWT032r8Hy4v4VqRtoc1/Yt3Ful1nhe9D4rp5pHmJZe+69TcqHkYhlANAICmCJyUgGyR5E2AsjROB5AsTEmD3AljyJjQDinJpRTlJvCS6tnrDgrQnw3wrpmlySVSjRTq/9SXvS+rZo/sW4QfEXEy1G5gnY6Y41ZJ/v1f3I/DHM/ReJ6NawZ6IQhiMqQZBslgNslsb6EsBZEwbABMkolgJksbE2BLIZUmS2BLEymyWBL2JKZLQEyeCCpEsBSZGSmY2AZXiAtgAzouJiTMiApMpEIvIFJloxp7loC0ykyE8DTAyJjyREtAUmWY0WgKRSJQ8gWgJyPIFCQsjAYyRgNDF0BMCkeZe2HSbfSOPL6FrSjRpV4wuFCPRSkvea9ZJv4npk8+faApqHGtrPH95YQb88Tmi8pWtUgGmBsHQGAAIeRMaAeRAIAYhgAAAwEHUAA3t9nmnjh/Vqv8V5GPygv9Ta+TV32fY/7p6g/G/f/rgbQRi+qBNg9hZyQAmDYsgMlg2JgIGAgExDZICZDKZLYEsllMhgLImwEwE2S2MlgJkMshgSyWhsTeUBD6gGwAZkUiMlpgWholMaYFotGOJaYFlJGNGRAXEeSUysgNMtERKQFIrJIJgUikyUMBjTJQwHkaYgQDGicjyBWUaE+0LH/ejTJrvscfKpL/U31k85dtPEVvr/ABVThZRzQsacrb2uc+0kpZk15J7eeCxK+ARQkisGwIBDATQhiAaEMAEPAYAAwMEDATwIeBAb7+z688LajHPS+f8A64G0Oh5h7PuKa3CGqQv6ftZ0XLluKMH/AHsMdPDK6rzPSGjazY8Q6XQ1PTq6rW1dZjLo0++LXc0+qMWEc3IgEyKHuxAxADEw6CeQHklsWQbATZORsnIA2TkbZLATZLGSwESx53JbATZD3HInID6EyY2yGAmQy2RICcgGAAypFolFJgUhoQAWikyEWkBcS08IhFZArI0yV0GgLTLyY0ykBY0SmUgKQxAuoFJhkQICgENANDEfO8cca2XBGku8uUqtxUzG2t84dWf5RXe/zYHy/a/x29JtYcPabXdO/u1zXFSDxKjRfcn3OX4Z8UaL1BcrppdMM5F3qF1rmsXGp3lV1bivJ1Kkn4+C8EuiXgjBqG/s36o3IjiLqNkopFCAAAGGB4ABADEBQMS3ABgAdQEAABz9OeISyu8+u7M+PP8AY3XJ2d5Ul+ibyaVVd1GXdUX4Py9D5O0jy0Fn97c4t9Hkr8y70gPX8ZxnFTjJSjJJqSeU14oO40R2V9qj0aVPRNcqt6c/doXEt3bP+F/yfh6dN7xlGcFKElKMkmpReU14pmLFJiGySAbEDEACYmxPoAMlgJsBNiB7hsBLJyOTJATeCWxsmQCbJY2SwJb3DOwMkAZDLZMgJyAsgBlyUiEUgMiY0yV0GgLRaZHoPIGRMZEXkoC8jITKAtFIxpFoC0ykyF1KTAtMCclJgPI0Sx5AeR5MVzdULK3ncXValQow3lUqyUYx9W9jXXFXbbo+mUalDRIvUrtrEavK1Qg/Ft7y+G3mMH1HGvHGm8F6d7e6kqt1UT9haxfvVH4vwiu9nm/iLiTUeKtTqajqlb2lae0YraNOPdGK7kjjarqt9rV/Vv8AULmpcXFV5lOb+i8Eu5I4bNyYjlWG05vyRnvKftKDa6x3MOnrMp+iOc0UdKh5MlxS9jVce7qvQxgCKQh9AGAs5GAmLAwYCAAABgACKpwdSpGC72S2c6xo4i6r6vZegHKilFYXcdfqP97H/D+Z2J12oP8AXR/wgcfp0NidmvatX4W5NL1Z1LnSW8Qkt52vp4x/l7u7wNdh1A9f2l5b6ha0ru0r07i3rR5qdSm8xkvJmRnmPg3tC1ngucoWc4V7So8zta2XBv8AiWN4vzXxybd4d7aOHNXUKWoOppVw9v13vUm/Ka6fFIxYr71ibJo16N3RjXt61OtSmsxqU5KUZejRTRAhMOgmwE2SORIAyGymQwJyJjEwAmQ8iYEtkvcbJAT6EtlPoQ9gE9yX0G2J7gSAwAtFLYlDQGRPYpMxopMDKpBkhMpMCkXkiJSApDTJRSAuLKyQikwKyUmQmUmBaGj5fiHtG4b4Z5oXd/Gtcx/5a2/WVM+DxtH4tGr+I+27WtS5qOj0YaXQe3tP26zXq9o/BfEsg3RrXEek8OW/t9Vv6FpBr3VOXvS/wxW7+CNY8SdvK96hw7YZ7vvN2vqoL838DUV3d3F9cSuLqvVuK095VKs3KT9WzEWco7PW+JNX4jr+21XUK9008xjOXuR9IrZfBHWsQGgMQwxgDk2DxKfoc5I4Fh/eS9DnpgYbqgq9PC/bjujrMNM7pnBvbZ71YL/EvzA4iDIAAdRi6DQCyA8CyANh0DqADEIqMXNqKWW+gF0KLr1FFdOrZ2ijhJLZIx29KNCHKt33vxM2QE1g62/3uPSKOybOsu3m4n8AMCHgBgIbEkMDsdF4j1fh2t7bStQuLSTeWoS92XrF7P4o2Vw/28VqfLS1/T1Vj0dxae7L1cHs/g16GpMCJg9TaFxdofE0ObS9Ro154y6LfLUj6we52zZ5Fp1J0pxqQlKE4vMZReGn5M+34e7YOItE5KV1UjqlutuS5fvpeU1v88kvJr0CyT47h/ta4a17lpVbiWm3L29nd4UW/KfT54PsVKM0pRkpRkspp5TMqRL6jZLATW5LY2S2AEthIlgJiew2yGA2yWxMQAyX0H6kgLIA15gBkTHklFZAqLLyY8lLIFJlZJTKAuL2HklFJgWnnqMiU406bnOUYwju5SeEvifJa32qcM6LzQV47+vHb2doudZ85fs/UD7JGG91C0023dxfXVG1ox61K01FfU0nrnbbrd9zU9Lt6Gm03spv9bV+b2XyPhL/AFO+1au7i/u693Vf79abk16Z6Gpymt1a/wBtmiaep0tKoVdTrLpP+7pJ+r3fwXxNacQ9pfEvEilSrXrtbaX/AC9rmnHHg31fxZ8uyS4KAQZKKwBOR5AADIAAMAYGayeK3wZ2KR1lo8V4+Z2aABbLq0l5hOahFyfRGC3UqsnWn3/srwQHHurb2Tc4fsN/I4527Sw090zhXNryJzpr3e9eAHFGLIZAABsMgAhiXgA0svY7G1t1Rg5z/aa38ibW29kuef7X4HK6oCYyjJZi00+9FHFqf2WsqkV+rm8SXg/E5WcgLB1Vw81pv+Znb9Dpm+aTfi8gLqAMQFIGC6BgADAC6gDHgS6lATg7nQOMdd4amv0ZqNalTzl0ZPnpv+l7fI6diA3DoPbnRq8tLXdOlSfR17V80fVwe6+DZsHSOI9I4gp8+l6hb3W2XCEvfj6xe6+R5dHTq1KNSNWlOdOpHeM4NqS9GifI9YsjO5oHQ+1ribR+WnXuY6lQX7l0syx5TW/zybB0Ttj0DUuWGoKtplZ7ZqLnp/8AcunxSM4r7xksx2t5bX9BV7S4pXFGXSpSmpRfxRbZAmS2U+hDATYuoPcl7AMlsBNgSA8gBY0SikBRaZjKQGRFIhbFrcDDf6haaVZ1b2+uIW9vSXNOpN7L/V+Rq/X+2/adHQrDDziNzdfioL838D5ztR4xlxFrErG1q506yk4w5XtVn0c/PwXl6nxJqRNdprHE+s8Qz5tT1G4uV3QcsQXpFbL5HWAHQ0AaYgwAwAAAAGgJY0DBAHQYhgGRMYmBdu8Voep2p08XyyT8Hk7eU8Rb6+C8QOPXzXqxoR/Zj703+RyEktl0WxFKl7OLy8yk8yfizJjABgBoGgOtvaHs5qcV7kvozjpna3FP2tKUO/G3qdT0AbYg7gwAZOZY0OZuq1stl6nDwdvbw9nSjHyAvGQ6DYYAicFUi4y6Mx27lHmozfvQ6PxRmIqR3jOK96P1XgBVWXLSnLwizpzs7yWLaT7nhHWAMQxMBxKbJQZAO8Yg6AMBNhkCiQyADBoEAE4HgEigOTpurX+jV/b6feV7Wp/FSm459V0fxNh8P9td1SnSoa5ZQrU+krm392a83Ho/hg1kxd5LB6js7621K0pXdnWhXt6seaFSDymjIzSfZVxfLRtWWk3dX+w3suWPM9qVXufkn0fwZuuT3M1SZPVjE2QDIZTJYE5AMABlXUYCAaLTIRSAtM+Y7R+Inw7wtc1KU+W6uv7PQa6pyW8vhHPxwfTGle2XWPvvENHTYSzTsaXvL/8ASe7+nKWDX6QDS2A2gXQeBDAQwwACe7GAgGwAAGDAQDXQAE+oADFkGAYyzt6XvUoS8kdQjtLSXNQh5bAZQBi6AMfUS3HgBYwdVc0HRqNdz3TO1bMdWlGtBxl8H4AdShoKkJU5uMlujNa2/tpZltFdfMCra2dZ80toL6nZeRMUkkltgtAIQ2CAWAyDBAcXUH+qivGRwUcrUX78I+CycQCiR9wgABpBgBZGGAAYmA8ALAIYIB4E0MAJH1BoOgCDAwYE7p5WU10a7j0RwRr/APtJw1a3s5ZuIr2Nf/qR6v4rD+J52ZsfsX1l0NVvNJqS9y5p+2pp/wAcevzi/wDxJRt5iaGyWYUeYCbAAwAfIAGmVkxosCkxpkotIAlONOEqk5csIpyk33JdTzHrGoz1jV7zUJ5zc1pVPRN7L5YN9domqforg3UasZctSrT+7w9Zvl/DLPPCNcpVAA8GghiwMAHgMjAMCGIBMQ2CQAhoAQALAwAWAGDQEnPsJZoteEjhNHK09+9OPkmBzQGGAEhgJgDDHeNABx7q29tDmj+3H6mSlS9lTUV3fVmQQDwNCQwEHQGAAGBDW4HWX0ua5l5JIwF1Zc9Wcu5tkMAQ+oikAZDAAAIAG1gBACAADIxMBiBBgAyIbQgDqPAsbDXQCWsnZ8Map+heILC/ziNGtFz/AMD2l9GzrWJrKwB6l2a2eV4ks6XgvVXrPC2nXTlzT9iqdR/zR91/hn4ndM5qliexYnuBPMAcq8QAafkUQngpMBpFoSGBrHtv1LlttM0yMt5zlcTXklyx/GXyNTo+r7VNTeo8aXcE8wtIxto/BZf/AJNnyeTcRWBkpjKGgYkwAB5AMgMQBkBdQAAAYgAeRZAEA0wyIaAO4z2UsV0vFNGBjoS5K0JeEkB3AgYgKE9xAA+gZECXiAxdRiAaGJAAAwEwDJNSXJTlLwTYzDey5beXnhAdamAJjwAJbDAMgA8CQ2AhiFkB4AWR5AAYCyA+gNiyDYBkfUQNgMQZGgEyS2iWgNtdimp+007UdNlLLo1Y1oL+WSw/rH6myTRfZTqLsOL6NJvELunOg/XHMvrH6m828GL6QCBsM7EVLzkAbAARUUQvEuLAyLYmtXhb0Z16m0KcXOT8kssaPnu0TUP0bwZqdVS5Z1KaoR9ZtR/BsDQN/dz1G/ubyp+3cVZVZesm3+ZhwCQzogSAeRMBoZKZQB5B0AAAQ2SADTEAFBjIsjyAgAYCGAZAQAIDuYy5oRl4rIGG0lzW8fLYzAPABkAEwGwQC7x5BiAYMQ0AgBsEAYOJqUvdhDxeTmnXajLNdL+GIHFQxJgA2wBB3gNAwbEAAIEA8DwGQATAAAQIYACQYDI2wFgfQQwAMDwJsDk6VfS0zU7S9i2nb1oVfk0z0rGcasYzg04SSlF+KfQ8vs9CcDaj+kuEtMrt8040VSk/OD5fyM9Ed4JseSWZVIDABlwIWSkwMhrfts1B09J07T0969eVWS8oRx+MvobGTNLdsV/964pp2qeY2lvGOP5pZk/o4lno+GQCQzaAGx4JaAeR5IXUoB5HkkaYDaFgAATGhYABhkQ0ADEAAA8AAdwu8GIDn2EswlHweTlZOvsZYrNeKOemBQyc5GugACAABiwNsAEAwyAgwGMjwA0dRcy9pcVJeZ2s5ckXLwWTpstvLAAQwwAYBDwDAWQwGAAQwwJgPvH1JKTAQDwIAwIYZAWBgMBDyIpAGdiXuMQEt4NwdjN/7fQryyk97a450v5Zr/WLNPtH3/Y1e+x1+7tHLCuLbmS8XGSf4Nko3EDEDbMKTQC3ACl0DcSZaAcVlnnTjK+/SPFWqXGcqVzOMX5RfKvoj0LeXKs7O4uZPCo0pVH8E3+R5jlOVWcpzeZSbk35s1ylAJgBoMQBkISGIYUxd4wAMiAAAeBAA+8YgAbQhh0AAyAYAMktjYgLtpctxB+eDtTp1s8+B28HzRUvFZAaH3AkPYBIbAGAhiewAGQB7AAx5FgewGC8ly28/PY6rJ2Goz/Vxj4vJ16QDQxdBgPohZAEADEkAAwAEAIbQIYEhkAABDXQb3AkeR4EAIeRAAPoAAAmfQcA3v6P4v0yq3iM6vsZek04/mj59l29edrcUriDxOlONReqefyA9OdQIo1o16NOtHeNSKmvRrJTOapb3AAAvCKQYK5QPne0G8+48GarUTxKdH2UfWbUfzZ59RubtnvPYcNW1qnvc3S+KjFv8cGml0N8pQHQHsLJQxA3sCAGAxANAJDAeQEhsBIMB0DIDzgBAEMfcIMhTDIshnYAEAACOztZc1CPlsdWc/T5ZjOPg8gcsA2BsAyGciKAlhkGCQDDIdBMCkNkoYHXajLNZR8EcYu5lz3E354MaAYAAAPoAgGh9SRgDQDJACskoAGLICApD6CQwE2LI2SwGMgaYDAGxZAbEDYgPQ/BN79/4S0qs3mX3eNOXrH3fyO6aPiuyG5+8cKOi3l29xOHoniX5s+1lsc6qctAGQAzIpAAGpu3KrL71o9HPuKFWePPMUayQAbiGxABQmNAAD7hAAAMAAfePuAAJfUSAAGAAAyWAAAwABoTAAEcmxbVbHjFgAHYB3gAAMAAAQAAgAAGD2TAAOkk23l94wAAGgAAYwABd5TAAEIAAYAACDvAAGAAAMkAAXeMAAGJAAAgAANrdiVWTt9XpZ91SpSS82pL8kbLl0ADF9VLAAIP/9k="
+                            alt="Naveen Chakravarthy Madeti">
+                        <div class="tick br"></div>
+                        <div class="tag-chip"><span class="dot"></span>Open to opportunities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">About</p>
+                        <h3>Professional Summary</h3>
+                    </div>
+                </div>
+                <p class="about-text reveal">Technology Strategist and Engineering Manager with <strong>over 12
+                        years</strong> of experience delivering scalable enterprise applications across <strong>FinTech,
+                        E-commerce, Digital Marketing, and AI-enabled platforms</strong>. Experienced in engineering
+                    leadership, solution architecture, Angular, Node.js, cloud technologies, and driving digital
+                    transformation initiatives.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Career</p>
+                        <h3>Professional Experience</h3>
+                    </div>
+                    <p class="section-note">Seven roles across engineering leadership, architecture, and frontend, 2013
+                        — present.</p>
+                </div>
+                <div class="timeline">
+
+                    <div class="tl-item current reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-head"><span class="tl-role">Technology Manager <span class="tl-company">— Starla
+                                    Jewels</span></span><span class="tl-date">Jan 2025 — Present</span></div>
+                        <div class="tl-loc">Hyderabad, India</div>
+                        <ul class="tl-highlights">
+                            <li>Leading engineering initiatives and technology strategy.</li>
+                            <li>Managing cross-functional development teams.</li>
+                            <li>Driving scalable software architecture and delivery.</li>
+                        </ul>
+                        <div class="tl-tags"><span class="tag">Angular</span><span class="tag">Node.js</span><span
+                                class="tag">Azure</span><span class="tag">AI</span><span class="tag">Leadership</span>
+                        </div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-head"><span class="tl-role">Technical Manager <span class="tl-company">—
+                                    Dhani</span></span><span class="tl-date">Mar 2022 — Mar 2025</span></div>
+                        <div class="tl-loc">Hyderabad, India</div>
+                        <ul class="tl-highlights">
+                            <li>Led engineering teams delivering enterprise healthcare and fintech solutions.</li>
+                            <li>Improved delivery processes and engineering standards.</li>
+                            <li>Collaborated with business stakeholders for roadmap planning.</li>
+                        </ul>
+                        <div class="tl-tags"><span class="tag">Angular</span><span class="tag">Node.js</span><span
+                                class="tag">Azure</span><span class="tag">Leadership</span></div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-head"><span class="tl-role">Senior UI Lead <span class="tl-company">—
+                                    Dhani</span></span><span class="tl-date">Feb 2022 — Feb 2023</span></div>
+                        <div class="tl-loc">Remote</div>
+                        <ul class="tl-highlights">
+                            <li>Led frontend architecture.</li>
+                            <li>Mentored developers.</li>
+                            <li>Improved application performance.</li>
+                        </ul>
+                        <div class="tl-tags"><span class="tag">Angular</span><span class="tag">TypeScript</span><span
+                                class="tag">RxJS</span></div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-head"><span class="tl-role">Senior Software Engineer <span class="tl-company">—
+                                    Saisanj Pvt. Ltd.</span></span><span class="tl-date">Jul 2020 — Feb 2022</span>
+                        </div>
+                        <div class="tl-loc">Hyderabad</div>
+                        <ul class="tl-highlights">
+                            <li>Developed scalable enterprise applications.</li>
+                            <li>Designed reusable frontend components.</li>
+                            <li>Collaborated with cross-functional teams.</li>
+                        </ul>
+                        <div class="tl-tags"><span class="tag">Angular</span><span class="tag">Node.js</span></div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-head"><span class="tl-role">Software Engineer <span class="tl-company">— Spandana
+                                    Sphoorty Financial Ltd</span></span><span class="tl-date">Jul 2018 — May 2020</span>
+                        </div>
+                        <div class="tl-loc">Hyderabad</div>
+                        <ul class="tl-highlights">
+                            <li>Built internal dashboards and finance applications.</li>
+                            <li>Led frontend development.</li>
+                            <li>Worked with Angular and SCSS.</li>
+                        </ul>
+                        <div class="tl-tags"><span class="tag">Angular</span><span class="tag">SCSS</span><span
+                                class="tag">TypeScript</span></div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-head"><span class="tl-role">Frontend Developer <span class="tl-company">—
+                                    TenTenTen Digital Products Pvt Ltd</span></span><span class="tl-date">Nov 2014 — Jun
+                                2018</span></div>
+                        <div class="tl-loc">Bangalore</div>
+                        <ul class="tl-highlights">
+                            <li>Developed responsive web applications.</li>
+                            <li>Worked with major enterprise clients.</li>
+                            <li>Created reusable UI components.</li>
+                        </ul>
+                        <div class="tl-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span></div>
+                    </div>
+
+                    <div class="tl-item reveal">
+                        <div class="tl-dot"></div>
+                        <div class="tl-head"><span class="tl-role">UI Designer <span class="tl-company">— Ochre Media
+                                    Pvt Ltd</span></span><span class="tl-date">Jun 2013 — Nov 2014</span></div>
+                        <div class="tl-loc">Hyderabad</div>
+                        <ul class="tl-highlights">
+                            <li>Created wireframes and UI designs.</li>
+                            <li>Developed responsive interfaces.</li>
+                            <li>Worked closely with business teams.</li>
+                        </ul>
+                        <div class="tl-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">Photoshop</span></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Toolkit</p>
+                        <h3>Skills</h3>
+                    </div>
+                </div>
+                <div class="skills-grid reveal">
+                    <div class="skill-cell">
+                        <h4>Frontend</h4>
+                        <div class="skill-tags"><span class="tag">Angular</span><span class="tag">TypeScript</span><span
+                                class="tag">JavaScript</span><span class="tag">HTML5</span><span
+                                class="tag">CSS3</span><span class="tag">SCSS</span><span class="tag">RxJS</span></div>
+                    </div>
+                    <div class="skill-cell">
+                        <h4>Backend</h4>
+                        <div class="skill-tags"><span class="tag">Node.js</span><span class="tag">Express</span></div>
+                    </div>
+                    <div class="skill-cell">
+                        <h4>Cloud</h4>
+                        <div class="skill-tags"><span class="tag">Azure</span><span class="tag">AWS</span></div>
+                    </div>
+                    <div class="skill-cell">
+                        <h4>AI</h4>
+                        <div class="skill-tags"><span class="tag">OpenAI</span><span class="tag">Gemini</span><span
+                                class="tag">NVIDIA APIs</span><span class="tag">Prompt Engineering</span></div>
+                    </div>
+                    <div class="skill-cell">
+                        <h4>Tools</h4>
+                        <div class="skill-tags"><span class="tag">Git</span><span class="tag">GitHub</span><span
+                                class="tag">Jira</span><span class="tag">Postman</span><span class="tag">VS Code</span>
+                        </div>
+                    </div>
+                    <div class="skill-cell">
+                        <h4>Leadership</h4>
+                        <div class="skill-tags"><span class="tag">Solution Architecture</span><span class="tag">People
+                                Management</span><span class="tag">Agile</span><span class="tag">Scrum</span><span
+                                class="tag">Mentoring</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Selected work</p>
+                        <h3>Projects</h3>
+                    </div>
+                </div>
+                <div class="projects-grid reveal">
+
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <h4>Farmora</h4><span class="proj-dur">2022 – 2025</span>
+                        </div>
+                        <p class="proj-role">Technical Manager</p>
+                        <p class="proj-desc">Enterprise healthcare platform for online consultations, appointments,
+                            patient records, diagnostics, and pharmacy integration.</p>
+                        <div class="proj-tags"><span class="tag">Angular</span><span class="tag">Node.js</span><span
+                                class="tag">Azure</span><span class="tag">REST API</span></div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <h4>Digital Gold Platform</h4><span class="proj-dur">2022 – 2025</span>
+                        </div>
+                        <p class="proj-role">Technical Manager</p>
+                        <p class="proj-desc">Enterprise platform for purchasing, selling, and managing digital gold
+                            investments with secure payment workflows.</p>
+                        <div class="proj-tags"><span class="tag">Angular</span><span class="tag">RxJS</span><span
+                                class="tag">Azure</span></div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <h4>Loan Management Platform</h4><span class="proj-dur">2022 – 2023</span>
+                        </div>
+                        <p class="proj-role">Senior UI Lead</p>
+                        <p class="proj-desc">End-to-end lending platform supporting customer onboarding, loan
+                            processing, repayments, and account management.</p>
+                        <div class="proj-tags"><span class="tag">Angular</span><span class="tag">TypeScript</span><span
+                                class="tag">REST API</span></div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <h4>Microfinance Dashboard</h4><span class="proj-dur">2018 – 2020</span>
+                        </div>
+                        <p class="proj-role">Software Engineer</p>
+                        <p class="proj-desc">Internal enterprise dashboard for managing financial operations, customer
+                            data, and reporting.</p>
+                        <div class="proj-tags"><span class="tag">Angular</span><span class="tag">SCSS</span><span
+                                class="tag">Chart.js</span></div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <h4>Responsive UI Framework</h4><span class="proj-dur">2020 – 2022</span>
+                        </div>
+                        <p class="proj-role">Senior Software Engineer</p>
+                        <p class="proj-desc">Reusable UI component library standardizing frontend development across
+                            multiple enterprise applications.</p>
+                        <div class="proj-tags"><span class="tag">Angular</span><span class="tag">SCSS</span><span
+                                class="tag">TypeScript</span></div>
+                    </div>
+
+                    <div class="proj-card">
+                        <div class="proj-top">
+                            <h4>Corporate Websites</h4><span class="proj-dur">2014 – 2018</span>
+                        </div>
+                        <p class="proj-role">Frontend Developer</p>
+                        <p class="proj-desc">Multiple enterprise websites and portals delivered for leading national and
+                            international brands.</p>
+                        <div class="proj-tags"><span class="tag">HTML5</span><span class="tag">jQuery</span><span
+                                class="tag">Bootstrap</span></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <p class="eyebrow">Background</p>
+                        <h3>Education &amp; More</h3>
+                    </div>
+                </div>
+                <div class="tri-grid reveal">
+                    <div class="tri-col">
+                        <h4 class="mini-label">Education</h4>
+                        <div class="edu-item">
+                            <div class="degree">Master's Degree</div>
+                            <div class="field">Mechatronics, Robotics &amp; Automation Engineering</div>
+                            <div class="inst">Vellore Institute of Technology</div>
+                            <div class="yrs">2011 — 2013</div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="degree">Bachelor of Engineering</div>
+                            <div class="field">Electrical &amp; Electronics Engineering</div>
+                            <div class="inst">Anil Neerukonda Institute of Engineering &amp; Technology</div>
+                            <div class="yrs">2007 — 2011</div>
+                        </div>
+                    </div>
+                    <div class="tri-col">
+                        <h4 class="mini-label">Certifications</h4>
+                        <ul class="plain-list">
+                            <li>AMCAT Certified Business Analyst</li>
+                            <li>AMCAT Certified Data Processing Specialist</li>
+                            <li>AMCAT</li>
+                        </ul>
+                        <h4 class="mini-label" style="margin-top:26px;">Languages</h4>
+                        <ul class="plain-list">
+                            <li>English</li>
+                            <li>Hindi</li>
+                            <li>Telugu</li>
+                            <li>Tamil</li>
+                        </ul>
+                    </div>
+                    <div class="tri-col">
+                        <h4 class="mini-label">Achievements</h4>
+                        <div class="ach-item">
+                            <div class="t">Enhanced System Reliability</div>
+                            <div class="d">Improved overall platform stability and customer experience.</div>
+                        </div>
+                        <div class="ach-item">
+                            <div class="t">Led High Performing Engineering Team</div>
+                            <div class="d">Mentored engineers and improved delivery efficiency.</div>
+                        </div>
+                        <div class="ach-item">
+                            <div class="t">Delivered Scalable Enterprise Solutions</div>
+                            <div class="d">Successfully delivered multiple enterprise-scale products.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <p class="eyebrow">Get in touch</p>
+                <h3>Contact</h3>
+                <div class="contact-grid">
+                    <span>Hyderabad, India</span>
+                    <a href="https://linkedin.com/in/ncreato/" target="_blank"
+                        rel="noopener">linkedin.com/in/ncreato</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© <span id="year"></span> Naveen Chakravarthy Madeti</p>
+            <p>Technology Strategist &amp; AI Enablement Leader</p>
+        </div>
+    </footer>
+
+    <!-- ============ PRINT-ONLY RESUME LAYOUT ============ -->
+    <div class="print-resume">
+        <div class="pr-header">
+            <h1>Naveen Chakravarthy Madeti</h1>
+            <div class="role">Technology Strategist &amp; AI Enablement Leader</div>
+            <div class="pr-contact">
+                <span>Hyderabad, India</span>
+                <a href="https://linkedin.com/in/ncreato/">linkedin.com/in/ncreato</a>
+            </div>
+        </div>
+
+        <div class="pr-section">
+            <h2>Summary</h2>
+            <p class="pr-summary">Technology Strategist and Engineering Manager with over 12 years of experience
+                delivering scalable enterprise applications across FinTech, E-commerce, Digital Marketing, and
+                AI-enabled platforms. Experienced in engineering leadership, solution architecture, Angular, Node.js,
+                cloud technologies, and driving digital transformation initiatives.</p>
+        </div>
+
+        <div class="pr-section">
+            <h2>Experience</h2>
+
+            <div class="pr-job">
+                <div class="pr-job-head"><span>Technology Manager — Starla Jewels</span><span>Jan 2025 — Present</span>
+                </div>
+                <div class="pr-job-sub"><span>Hyderabad, India</span></div>
+                <ul>
+                    <li>Leading engineering initiatives and technology strategy.</li>
+                    <li>Managing cross-functional development teams.</li>
+                    <li>Driving scalable software architecture and delivery.</li>
+                </ul>
+            </div>
+
+            <div class="pr-job">
+                <div class="pr-job-head"><span>Technical Manager — Dhani</span><span>Mar 2022 — Mar 2025</span></div>
+                <div class="pr-job-sub"><span>Hyderabad, India</span></div>
+                <ul>
+                    <li>Led engineering teams delivering enterprise healthcare and fintech solutions.</li>
+                    <li>Improved delivery processes and engineering standards.</li>
+                    <li>Collaborated with business stakeholders for roadmap planning.</li>
+                </ul>
+            </div>
+
+            <div class="pr-job">
+                <div class="pr-job-head"><span>Senior UI Lead — Dhani</span><span>Feb 2022 — Feb 2023</span></div>
+                <div class="pr-job-sub"><span>Remote</span></div>
+                <ul>
+                    <li>Led frontend architecture.</li>
+                    <li>Mentored developers.</li>
+                    <li>Improved application performance.</li>
+                </ul>
+            </div>
+
+            <div class="pr-job">
+                <div class="pr-job-head"><span>Senior Software Engineer — Saisanj Pvt. Ltd.</span><span>Jul 2020 — Feb
+                        2022</span></div>
+                <div class="pr-job-sub"><span>Hyderabad</span></div>
+                <ul>
+                    <li>Developed scalable enterprise applications.</li>
+                    <li>Designed reusable frontend components.</li>
+                    <li>Collaborated with cross-functional teams.</li>
+                </ul>
+            </div>
+
+            <div class="pr-job">
+                <div class="pr-job-head"><span>Software Engineer — Spandana Sphoorty Financial Ltd</span><span>Jul 2018
+                        — May 2020</span></div>
+                <div class="pr-job-sub"><span>Hyderabad</span></div>
+                <ul>
+                    <li>Built internal dashboards and finance applications.</li>
+                    <li>Led frontend development.</li>
+                    <li>Worked with Angular and SCSS.</li>
+                </ul>
+            </div>
+
+            <div class="pr-job">
+                <div class="pr-job-head"><span>Frontend Developer — TenTenTen Digital Products Pvt Ltd</span><span>Nov
+                        2014 — Jun 2018</span></div>
+                <div class="pr-job-sub"><span>Bangalore</span></div>
+                <ul>
+                    <li>Developed responsive web applications.</li>
+                    <li>Worked with major enterprise clients.</li>
+                    <li>Created reusable UI components.</li>
+                </ul>
+            </div>
+
+            <div class="pr-job">
+                <div class="pr-job-head"><span>UI Designer — Ochre Media Pvt Ltd</span><span>Jun 2013 — Nov 2014</span>
+                </div>
+                <div class="pr-job-sub"><span>Hyderabad</span></div>
+                <ul>
+                    <li>Created wireframes and UI designs.</li>
+                    <li>Developed responsive interfaces.</li>
+                    <li>Worked closely with business teams.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pr-section">
+            <h2>Skills</h2>
+            <div class="pr-skills-grid">
+                <div><b>Frontend:</b> Angular, TypeScript, JavaScript, HTML5, CSS3, SCSS, RxJS</div>
+                <div><b>Backend:</b> Node.js, Express</div>
+                <div><b>Cloud:</b> Azure, AWS</div>
+                <div><b>AI:</b> OpenAI, Gemini, NVIDIA APIs, Prompt Engineering</div>
+                <div><b>Tools:</b> Git, GitHub, Jira, Postman, VS Code</div>
+                <div><b>Leadership:</b> Solution Architecture, People Management, Agile, Scrum, Mentoring</div>
+            </div>
+        </div>
+
+        <div class="pr-section pr-two-col">
+            <div>
+                <h2>Education</h2>
+                <div class="pr-edu-item">
+                    <div class="d">Master's Degree, Mechatronics, Robotics &amp; Automation Engineering</div>
+                    <div>Vellore Institute of Technology · 2011 — 2013</div>
+                </div>
+                <div class="pr-edu-item">
+                    <div class="d">Bachelor of Engineering, Electrical &amp; Electronics Engineering</div>
+                    <div>Anil Neerukonda Institute of Engineering &amp; Technology · 2007 — 2011</div>
+                </div>
+                <h2 style="margin-top:12px;">Certifications</h2>
+                <p class="pr-list-inline">AMCAT Certified Business Analyst · AMCAT Certified Data Processing Specialist
+                    · AMCAT</p>
+            </div>
+            <div>
+                <h2>Languages</h2>
+                <p class="pr-list-inline">English, Hindi, Telugu, Tamil</p>
+                <h2 style="margin-top:12px;">Achievements</h2>
+                <p class="pr-list-inline">Enhanced system reliability and platform stability. Led and mentored a
+                    high-performing engineering team. Delivered multiple scalable enterprise-grade products.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // scroll reveal
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+            }, { threshold: 0.12 });
+            revealEls.forEach(el => io.observe(el));
+        } else {
+            revealEls.forEach(el => el.classList.add('in'));
+        }
+    </script>
+
+</body>
+
+</html>

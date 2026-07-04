@@ -1,0 +1,378 @@
+{
+  "site": {
+    "title": "Naveen Chakravarthy | Technology Strategist & AI Enablement Leader",
+    "description": "Technology Strategist, Engineering Manager, Solution Architect, and AI Enablement Leader with 12+ years of experience building scalable digital platforms.",
+    "url": "https://mnavinc.github.io/resume/",
+    "keywords": [
+      "Technology Manager",
+      "Engineering Manager",
+      "Solution Architect",
+      "Angular",
+      "Node.js",
+      "AI",
+      "Leadership",
+      "FinTech",
+      "E-commerce",
+      "Digital Transformation"
+    ]
+  },
+
+  "personal": {
+    "name": "Naveen Chakravarthy Madeti",
+    "headline": "Technology Strategist & AI Enablement Leader",
+    "tagline": "Building Scalable Engineering Teams • AI Products • Digital Transformation",
+    "photo": "assets/images/profile.jpg",
+    "location": "Hyderabad, India",
+    "email": "",
+    "phone": "",
+    "website": "",
+    "resume": "resume.pdf"
+  },
+
+  "summary": "Technology Strategist and Engineering Manager with over 12 years of experience delivering scalable enterprise applications across FinTech, E-commerce, Digital Marketing, and AI-enabled platforms. Experienced in engineering leadership, solution architecture, Angular, Node.js, cloud technologies, and driving digital transformation initiatives.",
+
+  "social": {
+    "linkedin": "https://linkedin.com/in/ncreato/",
+    "github": "",
+    "twitter": "",
+    "youtube": "",
+    "stackoverflow": ""
+  },
+
+  "experience": [
+    {
+      "company": "Starla Jewels",
+      "position": "Technology Manager",
+      "location": "Hyderabad, India",
+      "start": "2025-01",
+      "end": "Present",
+      "highlights": [
+        "Leading engineering initiatives and technology strategy.",
+        "Managing cross-functional development teams.",
+        "Driving scalable software architecture and delivery."
+      ],
+      "technologies": [
+        "Angular",
+        "Node.js",
+        "Azure",
+        "AI",
+        "Leadership"
+      ]
+    },
+    {
+      "company": "Dhani",
+      "position": "Technical Manager",
+      "location": "Hyderabad",
+      "start": "2022-03",
+      "end": "2025-03",
+      "highlights": [
+        "Led engineering teams delivering enterprise healthcare and fintech solutions.",
+        "Improved delivery processes and engineering standards.",
+        "Collaborated with business stakeholders for roadmap planning."
+      ],
+      "technologies": [
+        "Angular",
+        "Node.js",
+        "Azure",
+        "Leadership"
+      ]
+    },
+    {
+      "company": "Dhani",
+      "position": "Senior UI Lead",
+      "location": "Remote",
+      "start": "2022-02",
+      "end": "2023-02",
+      "highlights": [
+        "Led frontend architecture.",
+        "Mentored developers.",
+        "Improved application performance."
+      ],
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "RxJS"
+      ]
+    },
+    {
+      "company": "Saisanj Pvt. Ltd.",
+      "position": "Senior Software Engineer",
+      "location": "Hyderabad",
+      "start": "2020-07",
+      "end": "2022-02",
+      "highlights": [
+        "Developed scalable enterprise applications.",
+        "Designed reusable frontend components.",
+        "Collaborated with cross-functional teams."
+      ],
+      "technologies": [
+        "Angular",
+        "Node.js"
+      ]
+    },
+    {
+      "company": "Spandana Sphoorty Financial Ltd",
+      "position": "Software Engineer",
+      "location": "Hyderabad",
+      "start": "2018-07",
+      "end": "2020-05",
+      "highlights": [
+        "Built internal dashboards and finance applications.",
+        "Led frontend development.",
+        "Worked with Angular and SCSS."
+      ],
+      "technologies": [
+        "Angular",
+        "SCSS",
+        "TypeScript"
+      ]
+    },
+    {
+      "company": "TenTenTen Digital Products Pvt Ltd",
+      "position": "Frontend Developer",
+      "location": "Bangalore",
+      "start": "2014-11",
+      "end": "2018-06",
+      "highlights": [
+        "Developed responsive web applications.",
+        "Worked with major enterprise clients.",
+        "Created reusable UI components."
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "company": "Ochre Media Pvt Ltd",
+      "position": "UI Designer",
+      "location": "Hyderabad",
+      "start": "2013-06",
+      "end": "2014-11",
+      "highlights": [
+        "Created wireframes and UI designs.",
+        "Developed responsive interfaces.",
+        "Worked closely with business teams."
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "Photoshop"
+      ]
+    }
+  ],
+
+  "skills": {
+    "Frontend": [
+      "Angular",
+      "TypeScript",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "SCSS",
+      "RxJS"
+    ],
+    "Backend": [
+      "Node.js",
+      "Express"
+    ],
+    "Cloud": [
+      "Azure",
+      "AWS"
+    ],
+    "AI": [
+      "OpenAI",
+      "Gemini",
+      "NVIDIA APIs",
+      "Prompt Engineering"
+    ],
+    "Tools": [
+      "Git",
+      "GitHub",
+      "Jira",
+      "Postman",
+      "VS Code"
+    ],
+    "Leadership": [
+      "Solution Architecture",
+      "People Management",
+      "Agile",
+      "Scrum",
+      "Mentoring"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "Farmora",
+      "description": "Enterprise healthcare platform built for managing online consultations, appointments, patient records, diagnostics, pharmacy integration and healthcare services.",
+      "role": "Technical Manager",
+      "duration": "2022 - 2025",
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "Node.js",
+        "Azure",
+        "REST API",
+        "SCSS"
+      ],
+      "highlights": [
+        "Led frontend architecture and engineering team.",
+        "Implemented scalable component architecture.",
+        "Improved application performance and maintainability.",
+        "Worked closely with product owners and stakeholders."
+      ],
+      "github": "",
+      "demo": "",
+      "image": "assets/images/projects/farmora.jpg"
+    },
+    {
+      "name": "Digital Gold Platform",
+      "description": "Enterprise platform for purchasing, selling and managing digital gold investments with secure payment workflows.",
+      "role": "Technical Manager",
+      "duration": "2022 - 2025",
+      "technologies": [
+        "Angular",
+        "Node.js",
+        "Azure",
+        "RxJS",
+        "TypeScript"
+      ],
+      "highlights": [
+        "Led engineering delivery.",
+        "Designed scalable frontend architecture.",
+        "Integrated secure payment workflows.",
+        "Optimized user experience."
+      ],
+      "github": "",
+      "demo": "",
+      "image": "assets/images/projects/digital-gold.jpg"
+    },
+    {
+      "name": "Loan Management Platform",
+      "description": "End-to-end lending platform supporting customer onboarding, loan processing, repayments and account management.",
+      "role": "Senior UI Lead",
+      "duration": "2022 - 2023",
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "RxJS",
+        "REST API"
+      ],
+      "highlights": [
+        "Built reusable Angular modules.",
+        "Improved application performance.",
+        "Led frontend development team."
+      ],
+      "github": "",
+      "demo": "",
+      "image": "assets/images/projects/loan-platform.jpg"
+    },
+    {
+      "name": "Microfinance Dashboard",
+      "description": "Internal enterprise dashboard for managing financial operations, customer data and reporting.",
+      "role": "Software Engineer",
+      "duration": "2018 - 2020",
+      "technologies": [
+        "Angular",
+        "SCSS",
+        "TypeScript",
+        "Chart.js"
+      ],
+      "highlights": [
+        "Developed responsive dashboards.",
+        "Created reusable UI components.",
+        "Integrated reporting modules."
+      ],
+      "github": "",
+      "demo": "",
+      "image": "assets/images/projects/dashboard.jpg"
+    },
+    {
+      "name": "Corporate Websites",
+      "description": "Developed multiple enterprise websites and portals for leading national and international brands.",
+      "role": "Frontend Developer",
+      "duration": "2014 - 2018",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap"
+      ],
+      "highlights": [
+        "Built responsive websites.",
+        "Optimized SEO and page performance.",
+        "Delivered cross-browser compatible applications."
+      ],
+      "github": "",
+      "demo": "",
+      "image": "assets/images/projects/corporate-websites.jpg"
+    },
+    {
+      "name": "Responsive UI Framework",
+      "description": "Reusable UI component library used across multiple enterprise applications.",
+      "role": "Senior Software Engineer",
+      "duration": "2020 - 2022",
+      "technologies": [
+        "Angular",
+        "SCSS",
+        "TypeScript"
+      ],
+      "highlights": [
+        "Created reusable UI components.",
+        "Standardized frontend development.",
+        "Reduced duplicate code across projects."
+      ],
+      "github": "",
+      "demo": "",
+      "image": "assets/images/projects/ui-framework.jpg"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Master's Degree",
+      "field": "Mechatronics, Robotics & Automation Engineering",
+      "institution": "Vellore Institute of Technology",
+      "start": "2011",
+      "end": "2013"
+    },
+    {
+      "degree": "Bachelor of Engineering",
+      "field": "Electrical & Electronics Engineering",
+      "institution": "Anil Neerukonda Institute of Engineering & Technology",
+      "start": "2007",
+      "end": "2011"
+    }
+  ],
+
+  "certifications": [
+    "AMCAT Certified Business Analyst",
+    "AMCAT Certified Data Processing Specialist",
+    "AMCAT"
+  ],
+
+  "languages": [
+    "English",
+    "Hindi",
+    "Telugu",
+    "Tamil"
+  ],
+
+  "achievements": [
+    {
+      "title": "Enhanced System Reliability",
+      "description": "Improved overall platform stability and customer experience."
+    },
+    {
+      "title": "Led High Performing Engineering Team",
+      "description": "Mentored engineers and improved delivery efficiency."
+    },
+    {
+      "title": "Delivered Scalable Enterprise Solutions",
+      "description": "Successfully delivered multiple enterprise-scale products."
+    }
+  ]
+}

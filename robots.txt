@@ -1,0 +1,9 @@
+# ==========================================================
+# robots.txt
+# ==========================================================
+
+User-agent: *
+
+Allow: /
+
+Sitemap: https://YOUR_USERNAME.github.io/resume/sitemap.xml

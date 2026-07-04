@@ -1,0 +1,200 @@
+/* ==========================================================
+   Print Stylesheet
+   Premium A4 Optimized Layout
+   Preserves HTML fidelity (colors & structure)
+   ========================================================== */
+
+@page {
+    size: A4;
+    margin: 10mm; /* Small margins so the layout fits beautifully */
+}
+
+/* Force Light Theme Colors for Print */
+:root, [data-theme="dark"] {
+    --primary: #4F46E5 !important;
+    --primary-hover: #4338CA !important;
+    --primary-light: #EEF2FF !important;
+    
+    --bg: #ffffff !important; /* Force pure white background for printing */
+    --surface: #ffffff !important; 
+    --surface-hover: #ffffff !important;
+
+    --text: #0F172A !important;
+    --text-light: #475569 !important;
+
+    --border: #E2E8F0 !important;
+    
+    --shadow-sm: none !important;
+    --shadow: none !important;
+    --shadow-hover: none !important;
+}
+
+/* Force strict color and background printing */
+* {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    transition: none !important;
+    animation: none !important;
+    box-shadow: none !important; /* Remove shadows for cleaner print */
+}
+
+body {
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    font-size: 10pt; /* slightly smaller for print fit */
+    overflow: visible !important;
+}
+
+/* Hide non-print UI Elements */
+.header-actions,
+#theme-toggle,
+#download-btn,
+.hero-buttons,
+footer {
+    display: none !important;
+}
+
+/* Reset containers for print */
+.container {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Adjust Header */
+.header {
+    position: static !important;
+    border-bottom: 2px solid var(--primary) !important;
+    padding-bottom: 5mm !important;
+    margin-bottom: 5mm !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+nav {
+    display: flex !important; /* Keep nav if it looks good, or hide it if we want pure resume */
+}
+
+/* Adjust Hero */
+.hero {
+    padding: 0 !important;
+    margin-bottom: 10mm !important;
+}
+
+.hero::before, .hero-image::after {
+    display: none !important; /* hide ambient gradients */
+}
+
+.hero-grid {
+    grid-template-columns: 1fr 150px !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
+}
+
+.hero-image {
+    justify-content: flex-end !important;
+}
+
+.hero-image img {
+    width: 120px !important;
+    height: 120px !important;
+    border: none !important;
+}
+
+.hero h1 {
+    font-size: 26pt !important;
+    margin-bottom: 5px !important;
+}
+
+.hero h2 {
+    font-size: 14pt !important;
+}
+
+.tagline {
+    font-size: 10pt !important;
+    margin-top: 10px !important;
+}
+
+/* Adjust Sections */
+.section {
+    padding: 5mm 0 !important;
+    page-break-inside: avoid;
+}
+
+.section h2 {
+    font-size: 18pt !important;
+    margin-bottom: 15px !important;
+}
+
+/* Timeline & Cards Layout adjustments */
+.card, .skill-group, .project-card, .education-card, #certification-list li {
+    border: 1px solid var(--border) !important;
+    background: var(--surface) !important;
+    padding: 15px !important;
+    margin-bottom: 10px !important;
+    page-break-inside: avoid !important;
+    border-radius: 8px !important; /* slightly smaller radius */
+}
+
+/* Timeline specific */
+.timeline {
+    padding-left: 20px !important;
+}
+
+.timeline::before {
+    left: 8px !important;
+    background: var(--border) !important;
+}
+
+.timeline-item {
+    margin-bottom: 20px !important;
+}
+
+.timeline-item::before {
+    width: 16px !important;
+    height: 16px !important;
+    left: -20px !important;
+    top: 25px !important;
+    border-width: 3px !important;
+}
+
+.timeline-title {
+    font-size: 12pt !important;
+}
+
+/* Grids - force multi-column where appropriate for print */
+#skills-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+}
+
+#projects-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+}
+
+.contact-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px !important;
+}
+
+.contact-grid p {
+    padding: 10px !important;
+    font-size: 9pt !important;
+}
+
+/* Page Break Management */
+h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid !important;
+}
+
+p, li, .skill, .tag {
+    orphans: 3;
+    widows: 3;
+}
+
+/* Ensure links are readable and clean */
+a {
+    text-decoration: none !important;
+}

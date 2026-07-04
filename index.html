@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="doc-title">Naveen Chakravarthy - Resume</title>
+  <meta name="description" id="doc-desc"
+    content="Technology Strategist, Engineering Manager, Solution Architect, and AI Enablement Leader with 12+ years of experience building scalable digital platforms.">
+  <meta name="theme-color" content="#14171F">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F7F4EC;
+      --paper-raised: #FFFFFF;
+      --ink: #14171F;
+      --ink-soft: #565C6B;
+      --ink-faint: #8C8F98;
+      --blueprint: #2647E0;
+      --blueprint-dim: #DDE3FA;
+      --teal: #0E8A80;
+      --coral: #DD5B33;
+      --line: #E1DACB;
+      --grid-line: rgba(38, 71, 224, 0.07);
+      --radius: 2px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .mono {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    ::selection {
+      background: var(--blueprint);
+      color: #fff;
+    }
+
+    /* focus visibility */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--blueprint);
+      outline-offset: 3px;
+    }
+
+    /* ============ EYEBROW / SECTION LABEL ============ */
+    .eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--blueprint);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: var(--blueprint);
+      display: inline-block;
+    }
+
+    /* ============ HEADER / NAV ============ */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(247, 244, 236, 0.86);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 68px;
+    }
+
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: .02em;
+    }
+
+    .logo span {
+      color: var(--blueprint);
+    }
+
+    nav.primary-nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav.primary-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      letter-spacing: .02em;
+      position: relative;
+      padding: 6px 0;
+      transition: color .15s ease;
+    }
+
+    nav.primary-nav a:hover {
+      color: var(--ink);
+    }
+
+    nav.primary-nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--blueprint);
+      transition: width .2s ease;
+    }
+
+    nav.primary-nav a:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--ink);
+      cursor: pointer;
+      transition: all .15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .btn.primary:hover {
+      background: var(--blueprint);
+      border-color: var(--blueprint);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .btn.ghost:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--ink);
+      margin: 5px 0;
+      transition: .2s;
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 88px 0 96px;
+    }
+
+    .hero .blueprint-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: radial-gradient(ellipse 90% 70% at 65% 30%, black 20%, transparent 75%);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: clamp(34px, 4.4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -.01em;
+      margin: 6px 0 10px;
+    }
+
+    .hero-content h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: clamp(17px, 2vw, 21px);
+      color: var(--blueprint);
+      margin-bottom: 16px;
+    }
+
+    .hero-content .tagline {
+      color: var(--ink-soft);
+      font-size: 16px;
+      max-width: 46ch;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 22px;
+      margin-top: 34px;
+      flex-wrap: wrap;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12.5px;
+      color: var(--ink-faint);
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-meta b {
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+
+    .hero-image {
+      position: relative;
+      justify-self: center;
+    }
+
+    .frame {
+      position: relative;
+      width: 280px;
+      height: 280px;
+    }
+
+    .frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      filter: grayscale(14%);
+    }
+
+    .tick {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border: 2px solid var(--blueprint);
+    }
+
+    .tick.tl {
+      top: -12px;
+      left: -12px;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .tick.br {
+      bottom: -12px;
+      right: -12px;
+      border-left: none;
+      border-top: none;
+    }
+
+    .tag-chip {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .06em;
+      padding: 7px 12px;
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .tag-chip .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .35;
+      }
+    }
+
+    /* ============ SECTION SHELL ============ */
+    .section {
+      padding: 80px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .section-head h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(24px, 3vw, 32px);
+      font-weight: 600;
+      letter-spacing: -.01em;
+    }
+
+    .section-note {
+      color: var(--ink-faint);
+      font-size: 13.5px;
+      max-width: 34ch;
+      text-align: right;
+    }
+
+    /* ============ ABOUT ============ */
+    .about-text {
+      font-size: 18px;
+      color: var(--ink-soft);
+      max-width: 74ch;
+      line-height: 1.75;
+    }
+
+    .about-text strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ============ EXPERIENCE (timeline) ============ */
+    .timeline {
+      position: relative;
+      padding-left: 36px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .tl-item {
+      position: relative;
+      padding-bottom: 44px;
+      break-inside: avoid;
+    }
+
+    .tl-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -36px;
+      top: 5px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 2px solid var(--ink-faint);
+    }
+
+    .tl-item.current .tl-dot {
+      border-color: var(--coral);
+      background: var(--coral);
+    }
+
+    .tl-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .tl-role {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 19px;
+    }
+
+    .tl-company {
+      color: var(--blueprint);
+      font-weight: 500;
+    }
+
+    .tl-date {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
+
+    .tl-loc {
+      font-size: 13px;
+      color: var(--ink-faint);
+      margin-bottom: 12px;
+    }
+
+    .tl-highlights {
+      list-style: none;
+      display: grid;
+      gap: 7px;
+      margin-bottom: 14px;
+    }
+
+    .tl-highlights li {
+      padding-left: 16px;
+      position: relative;
+      color: var(--ink-soft);
+      font-size: 15px;
+    }
+
+    .tl-highlights li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--ink-faint);
+    }
+
+    .tl-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-soft);
+      border: 1px solid var(--line);
+      padding: 4px 9px;
+      border-radius: var(--radius);
+      background: var(--paper-raised);
+    }
+
+    /* ============ SKILLS ============ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .skill-cell {
+      background: var(--paper-raised);
+      padding: 26px;
+      break-inside: avoid;
+    }
+
+    .skill-cell h4 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 14px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .skill-tags .tag {
+      background: var(--paper);
+    }
+
+    /* ============ PROJECTS ============ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .proj-card {
+      background: var(--paper-raised);
+      padding: 30px;
+      transition: background .15s ease;
+      position: relative;
+      break-inside: avoid;
+    }
+
+    .proj-card:hover {
+      background: #fff;
+    }
+
+    .proj-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+
+    .proj-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .proj-dur {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      color: var(--ink-faint);
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .proj-role {
+      color: var(--blueprint);
+      font-size: 12.5px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .proj-desc {
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      margin-bottom: 14px;
+    }
+
+    .proj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* ============ EDUCATION / CERTS / ACHIEVEMENTS ROW ============ */
+    .tri-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr 1fr;
+      gap: 48px;
+      break-inside: avoid;
+    }
+
+    .edu-item {
+      margin-bottom: 22px;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .edu-item .degree {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .edu-item .field {
+      color: var(--blueprint);
+      font-size: 14px;
+      margin: 2px 0 4px;
+    }
+
+    .edu-item .inst {
+      color: var(--ink-soft);
+      font-size: 13.5px;
+    }
+
+    .edu-item .yrs {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11.5px;
+      color: var(--ink-faint);
+      margin-top: 3px;
+    }
+
+    .plain-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .plain-list li {
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .plain-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      background: var(--teal);
+    }
+
+    .ach-item {
+      margin-bottom: 18px;
+    }
+
+    .ach-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .ach-item .t {
+      font-weight: 600;
+      font-size: 14.5px;
+      margin-bottom: 2px;
+    }
+
+    .ach-item .d {
+      color: var(--ink-soft);
+      font-size: 13.5px;
+    }
+
+    .tri-col h4.mini-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 18px;
+    }
+
+    /* ============ CONTACT / FOOTER ============ */
+    .contact-section {
+      background: var(--ink);
+      color: var(--paper);
+      border-top: none;
+    }
+
+    .contact-section .eyebrow {
+      color: var(--teal);
+    }
+
+    .contact-section .eyebrow::before {
+      background: var(--teal);
+    }
+
+    .contact-section h3 {
+      color: #fff;
+    }
+
+    .contact-grid {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .contact-grid a,
+    .contact-grid span {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+      color: #D8D9DE;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-grid a:hover {
+      color: var(--teal);
+    }
+
+    footer {
+      padding: 26px 0;
+      font-size: 12.5px;
+      color: var(--ink-faint);
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ============ REVEAL ANIMATION ============ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .tag-chip .dot {
+        animation: none;
+      }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width:860px) {
+      nav.primary-nav {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-image {
+        justify-self: start;
+        order: -1;
+      }
+
+      .frame {
+        width: 150px;
+        height: 150px;
+      }
+
+      .skills-grid,
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tri-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-note {
+        text-align: left;
+      }
+    }
+
+    @media (max-width:560px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .hero {
+        padding: 60px 0 64px;
+      }
+
+      .header-actions .btn.ghost span.label {
+        display: none;
+      }
+    }
+
+    /* ============ PRINT ============ */
+    @media print {
+      @page {
+        margin: 10mm;
+        size: A4;
+      }
+
+      /* Force exact HTML styling but override colors for saving ink */
+      body,
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      body {
+        background: #fff !important;
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+      }
+
+      /* Hide non-printable elements */
+      .site-header,
+      .hero-buttons,
+      .tag-chip .dot,
+      .hero-image {
+        display: none !important;
+      }
+      
+      /* Make contact section white background */
+      .contact-section {
+        background: transparent !important;
+        color: var(--ink) !important;
+        border-top: 1px solid var(--line) !important;
+      }
+      .contact-section h3, 
+      .contact-section .eyebrow, 
+      .contact-grid a, 
+      .contact-grid span {
+        color: var(--ink) !important;
+      }
+      .contact-section .eyebrow::before {
+        background: var(--blueprint) !important;
+      }
+
+      /* Shrink spacing and fonts to fit 2-3 pages */
+      .section {
+        padding: 20px 0 !important;
+      }
+
+      .hero {
+        padding: 15px 0 20px !important;
+      }
+      
+      .hero-grid { 
+        grid-template-columns: 1fr !important; /* Full width since image is removed */
+        gap: 20px !important; 
+      }
+      
+      .hero-content h1 { font-size: 32px !important; margin-bottom: 5px !important; }
+      .hero-content h2 { font-size: 16px !important; margin-bottom: 8px !important; }
+      .hero-content .tagline { font-size: 13.5px !important; margin-bottom: 15px !important; max-width: 100% !important; }
+      .hero-meta { margin-top: 15px !important; }
+      
+      .section-head { margin-bottom: 20px !important; }
+      .section-head h3 { font-size: 22px !important; }
+      
+      .about-text { font-size: 14.5px !important; line-height: 1.5 !important; }
+      
+      .tl-item { padding-bottom: 24px !important; break-inside: auto !important; }
+      .tl-role { font-size: 16px !important; }
+      .tl-highlights li { font-size: 13px !important; }
+      
+      .skills-grid, .projects-grid { 
+        background: transparent !important; 
+        border: none !important; 
+        gap: 15px !important; 
+      }
+      .skill-cell { padding: 0 0 10px 0 !important; break-inside: auto !important; background: transparent !important; }
+      .proj-card { padding: 0 0 16px 0 !important; break-inside: auto !important; background: transparent !important; }
+      .proj-card h4 { font-size: 15px !important; }
+      .proj-desc { font-size: 13px !important; margin-bottom: 8px !important; }
+      
+      .tri-grid { 
+        display: flex !important; 
+        flex-direction: row !important; 
+        flex-wrap: wrap !important; 
+        gap: 20px !important; 
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+      }
+      .tri-col {
+        flex: 1 1 200px !important;
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+      }
+      .edu-item { margin-bottom: 12px !important; }
+      .edu-item .degree { font-size: 14px !important; }
+      
+      .plain-list li { font-size: 12.5px !important; }
+      
+      /* Ensure sections don't avoid breaking */
+      .section, .container, .timeline {
+        break-inside: auto !important;
+        page-break-inside: auto !important;
+      }
+      
+      h3, h4, .eyebrow {
+        break-after: avoid !important;
+        page-break-after: avoid !important;
+      }
+      
+      /* Adjust fonts/sizes slightly to ensure they fit a single page or break cleanly */
+      .container {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
+      /* Reset animations */
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">M<span>N</span>C</div>
+      <nav class="primary-nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a id="linkedin-btn" class="btn primary" href="#" target="_blank" rel="noopener"><span
+            class="label">LinkedIn</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="blueprint-grid"></div>
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p id="hero-loc" class="eyebrow mono"></p>
+          <h1 id="hero-name"></h1>
+          <h2 id="hero-headline"></h2>
+          <p id="hero-tagline" class="tagline"></p>
+          <div class="hero-buttons">
+            <a id="hero-linkedin-btn" class="btn primary" href="#" target="_blank" rel="noopener">Connect on
+              LinkedIn</a>
+          </div>
+          <div class="hero-meta">
+            <span><b>12+ yrs</b> experience</span>
+            <span><b>FinTech · Healthcare · AI</b></span>
+          </div>
+        </div>
+        <div class="hero-image reveal">
+          <div class="frame">
+            <div class="tick tl"></div>
+            <img id="hero-photo" src="" alt="Profile Photo">
+            <div class="tick br"></div>
+            <div class="tag-chip"><span class="dot"></span>Open to opportunities</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">About</p>
+            <h3>Professional Summary</h3>
+          </div>
+        </div>
+        <p id="about-summary" class="about-text reveal"></p>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Career</p>
+            <h3>Professional Experience</h3>
+          </div>
+        </div>
+        <div id="experience-list" class="timeline"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Toolkit</p>
+            <h3>Skills</h3>
+          </div>
+        </div>
+        <div id="skills-grid" class="skills-grid reveal"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h3>Projects</h3>
+          </div>
+        </div>
+        <div id="projects-grid" class="projects-grid reveal"></div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Background</p>
+            <h3>Education &amp; More</h3>
+          </div>
+        </div>
+        <div class="tri-grid reveal">
+          <div class="tri-col">
+            <h4 class="mini-label">Education</h4>
+            <div id="education-list"></div>
+          </div>
+          <div class="tri-col">
+            <h4 class="mini-label">Certifications</h4>
+            <ul id="certification-list" class="plain-list"></ul>
+            <h4 class="mini-label" style="margin-top:26px;">Languages</h4>
+            <ul id="language-list" class="plain-list"></ul>
+          </div>
+          <div class="tri-col">
+            <h4 class="mini-label">Achievements</h4>
+            <div id="achievement-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <p class="eyebrow">Get in touch</p>
+        <h3>Contact</h3>
+        <div class="contact-grid">
+          <span id="contact-loc"></span>
+          <a id="contact-linkedin" href="#" target="_blank" rel="noopener"></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> <span id="footer-name"></span></p>
+      <p id="footer-headline"></p>
+    </div>
+  </footer>
+
+  <!-- Load Data -->
+  <script src="data/profile.js"></script>
+
+  <!-- Render Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof profile === 'undefined') {
+        console.error("Profile data not loaded.");
+        return;
+      }
+
+      const $ = (id) => document.getElementById(id);
+      const escapeHTML = (str) => String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[m]);
+
+      // SEO & Head
+      $("doc-title").textContent = profile.site.title;
+      $("doc-desc").content = profile.site.description;
+
+      // Hero & Header
+      $("linkedin-btn").href = profile.social.linkedin;
+      $("hero-linkedin-btn").href = profile.social.linkedin;
+      $("hero-loc").textContent = profile.personal.location;
+      $("hero-name").textContent = profile.personal.name;
+      $("hero-headline").textContent = profile.personal.headline;
+      $("hero-tagline").textContent = profile.personal.tagline;
+      $("hero-photo").src = profile.personal.photo;
+
+      // About
+      $("about-summary").innerHTML = profile.summary; // allowing HTML like <strong> if passed, or just text
+
+      // Experience
+      const expContainer = $("experience-list");
+      profile.experience.forEach((job, index) => {
+        const isCurrent = index === 0 ? "current" : "";
+        const html = `
+      <div class="tl-item ${isCurrent} reveal">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <span class="tl-role">${escapeHTML(job.position)} <span class="tl-company">— ${escapeHTML(job.company)}</span></span>
+          <span class="tl-date">${escapeHTML(job.start)} — ${escapeHTML(job.end)}</span>
+        </div>
+        <div class="tl-loc">${escapeHTML(job.location)}</div>
+        <ul class="tl-highlights">
+          ${job.highlights.map(h => `<li>${escapeHTML(h)}</li>`).join("")}
+        </ul>
+        <div class="tl-tags">
+          ${job.technologies.map(t => `<span class="tag">${escapeHTML(t)}</span>`).join("")}
+        </div>
+      </div>
+    `;
+        expContainer.insertAdjacentHTML('beforeend', html);
+      });
+
+      // Skills
+      const skillsContainer = $("skills-grid");
+      Object.entries(profile.skills).forEach(([category, skills]) => {
+        const html = `
+      <div class="skill-cell">
+        <h4>${escapeHTML(category)}</h4>
+        <div class="skill-tags">
+          ${skills.map(s => `<span class="tag">${escapeHTML(s)}</span>`).join("")}
+        </div>
+      </div>
+    `;
+        skillsContainer.insertAdjacentHTML('beforeend', html);
+      });
+
+      // Projects
+      const projContainer = $("projects-grid");
+      profile.projects.forEach(proj => {
+        const html = `
+      <div class="proj-card">
+        <div class="proj-top"><h4>${escapeHTML(proj.name)}</h4><span class="proj-dur hidden">${escapeHTML(proj.duration)}</span></div>
+        <p class="proj-role hidden">${escapeHTML(proj.role)}</p>
+        <p class="proj-desc">${escapeHTML(proj.description)}</p>
+        <div class="proj-tags">
+          ${proj.technologies.map(t => `<span class="tag">${escapeHTML(t)}</span>`).join("")}
+        </div>
+      </div>
+    `;
+        projContainer.insertAdjacentHTML('beforeend', html);
+      });
+
+      // Education
+      const eduContainer = $("education-list");
+      profile.education.forEach(edu => {
+        const html = `
+      <div class="edu-item">
+        <div class="degree">${escapeHTML(edu.degree)}</div>
+        <div class="field">${escapeHTML(edu.field)}</div>
+        <div class="inst">${escapeHTML(edu.institution)}</div>
+        <div class="yrs">${escapeHTML(edu.start)} — ${escapeHTML(edu.end)}</div>
+      </div>
+    `;
+        eduContainer.insertAdjacentHTML('beforeend', html);
+      });
+
+      // Certifications
+      const certContainer = $("certification-list");
+      profile.certifications.forEach(cert => {
+        certContainer.insertAdjacentHTML('beforeend', `<li>${escapeHTML(cert)}</li>`);
+      });
+
+      // Languages
+      const langContainer = $("language-list");
+      profile.languages.forEach(lang => {
+        langContainer.insertAdjacentHTML('beforeend', `<li>${escapeHTML(lang)}</li>`);
+      });
+
+      // Achievements
+      const achContainer = $("achievement-list");
+      profile.achievements.forEach(ach => {
+        const html = `
+      <div class="ach-item">
+        <div class="t">${escapeHTML(ach.title)}</div>
+        <div class="d">${escapeHTML(ach.description)}</div>
+      </div>
+    `;
+        achContainer.insertAdjacentHTML('beforeend', html);
+      });
+
+      // Contact & Footer
+      $("contact-loc").textContent = profile.personal.location;
+      $("contact-linkedin").href = profile.social.linkedin;
+      $("contact-linkedin").textContent = profile.social.linkedin.replace("https://", "");
+
+      $("year").textContent = new Date().getFullYear();
+      $("footer-name").textContent = profile.personal.name;
+      $("footer-headline").textContent = profile.personal.headline;
+
+      // Trigger reveals
+      setTimeout(() => {
+        document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+      }, 100);
+    });
+  </script>
+
+</body>
+
+</html>
