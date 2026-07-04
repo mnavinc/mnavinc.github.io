@@ -28,7 +28,7 @@ const profile = {
     "resume": "resume.pdf"
   },
 
-  "summary": "Technical Manager and Software Architect with over 12 years of hands-on experience in full-stack engineering, enterprise architecture, and team leadership. Proven track record of delivering scalable cloud-native platforms, integrating Generative AI solutions, and leading cross-functional teams to build high-performance applications in FinTech and Healthcare domains. Deep expertise in Angular, Node.js, Azure, and modern AI/LLM ecosystems.",
+  "summary": "Technical Manager and Software Architect with over 12 years of hands-on experience in full-stack engineering, enterprise architecture, and team leadership. Proven track record of delivering scalable cloud-native platforms, integrating Generative AI solutions, and leading cross-functional teams to build high-performance applications in FinTech and Healthcare domains. Deep expertise in Node.js, AWS, GCP, Next.Js and modern AI/LLM ecosystems.",
 
   "social": {
     "linkedin": "https://linkedin.com/in/ncreato/",

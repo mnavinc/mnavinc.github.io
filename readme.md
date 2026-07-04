@@ -144,7 +144,7 @@ main
 Your website will be available at
 
 ```
-https://YOUR_USERNAME.github.io/resume/
+https://mnavinc.github.io/resume/
 ```
 
 ---
@@ -210,7 +210,7 @@ profile.json
 Example
 
 ```json
-"https://YOUR_USERNAME.github.io/resume/"
+"https://mnavinc.github.io/resume/"
 ```
 
 ---
