@@ -1182,6 +1182,8 @@
         <h3>Contact</h3>
         <div class="contact-grid">
           <span id="contact-loc"></span>
+          <a id="contact-email" href=""></a>
+          <a id="contact-phone" href=""></a>
           <a id="contact-linkedin" href="#" target="_blank" rel="noopener"></a>
         </div>
       </div>
@@ -1318,6 +1320,10 @@
 
       // Contact & Footer
       $("contact-loc").textContent = profile.personal.location;
+      $("contact-email").href = "mailto:" + profile.personal.email;
+      $("contact-email").textContent = profile.personal.email;
+      $("contact-phone").href = "tel:" + profile.personal.phone;
+      $("contact-phone").textContent = profile.personal.phone;
       $("contact-linkedin").href = profile.social.linkedin;
       $("contact-linkedin").textContent = profile.social.linkedin.replace("https://", "");
 

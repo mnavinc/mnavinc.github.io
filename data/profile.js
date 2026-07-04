@@ -2,7 +2,7 @@ const profile = {
   "site": {
     "title": "Naveen Chakravarthy | Full-Stack Architect & Technical Manager",
     "description": "Technical Manager, Software Architect, and Full-Stack Leader with 12+ years of experience building scalable platforms, enterprise architectures, and AI-enabled solutions.",
-    "url": "https://mnavinc.github.io/resume/",
+    "url": "https://mnavinc.github.io/",
     "keywords": [
       "Technical Manager",
       "Software Architect",
@@ -32,7 +32,7 @@ const profile = {
 
   "social": {
     "linkedin": "https://linkedin.com/in/ncreato/",
-    "github": "https://github.com/mnavinc",
+    "github": "https://mnavinc.github.io/",
     "twitter": "",
     "youtube": "",
     "stackoverflow": ""
