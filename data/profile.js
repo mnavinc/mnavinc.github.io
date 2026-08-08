@@ -314,7 +314,7 @@ const profile = {
   ],
 
   "certifications": [
-    "Certified Software Architect (Mock/Example)",
+    "Certified Software Architect",
     "AMCAT Certified Business Analyst",
     "AMCAT Certified Data Processing Specialist"
   ],
