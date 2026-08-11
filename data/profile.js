@@ -48,7 +48,7 @@ const profile = {
       "highlights": [
         "Leading full-stack engineering initiatives and defining the overarching technology strategy and cloud architecture.",
         "Managing cross-functional development teams to build scalable, AI-powered digital commerce platforms.",
-        "Architecting robust CI/CD pipelines and microservices deployment strategies on Azure."
+        "Architecting robust CI/CD pipelines and microservices deployment strategies on AWS."
       ],
       "technologies": [
         "System Architecture",
